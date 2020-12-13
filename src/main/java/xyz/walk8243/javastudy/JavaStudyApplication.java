@@ -14,9 +14,15 @@ public class JavaStudyApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JavaStudyApplication.class, args);
 
+		log.trace("message");
+		log.debug("message");
+		log.info("message");
+		log.warn("message");
+		log.error("message");
+
 		RequestService requestService = new RequestService();
 		String resource = requestService.getResponse();
-		log.info(resource);
+		log.info(String.valueOf(resource.length()));
 	}
 
 }
